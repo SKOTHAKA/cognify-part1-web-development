@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+       <title>Color Change Onclick <Button></Button></title>
+       <style>
+        .center-box{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background-color:purple;
+        }
+        #change{
+            width:200px;
+            height:100px;
+            font-size:24px;
+        }
+       </style>
+       <script type="text/javascript">
+        var count = 0;
+        function myfunction(x){
+            if(x == 1){
+                count=count + 1;
+            }
+            if(count == 1){
+                document.getElementById("change").style.backgroundColor ="green";
+            }
+            else if (count==2){
+                document.getElementById("change").style.backgroundColor ="blue";
+            } else{
+                document.getElementById("change").style.backgroundColor ="initial";
+            }
+            }
+       </script>
+
+    </head>
+    <body>
+        <div class="center-box">
+            <button id="change" onclick="myfunction(1)" type="button" class="btn btn-success">Success</button>
+         </div>
+    </body>
+</html>

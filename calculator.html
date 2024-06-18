@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Container</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function fun1(){
+            var fnum=document.getElementById("txtf1").value;
+            var snum=document.getElementById("txtf2").value;
+            var tot=parseInt(fnum)+parseInt(snum);
+            document.getElementById("result").innerHTML=tot;         
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="box-container">
+            <h1>Addition of two numbers</h1>
+            Enter First Number:<input id="txtf1"><br/>
+            Enter Second Number:<input id="txtf2"><br/>
+            Result:<h2 id="result"></h2>
+            <button onclick="fun1()">Calculate</button>
+        </div>
+    </div>
+</body>
+</html>

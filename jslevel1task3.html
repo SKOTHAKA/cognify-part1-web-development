@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Alert Box</title>
+        <style>
+            body{
+                background-color:purple;
+                margin:0;
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+
+            }
+            #greetingBox{
+                padding:20px;
+                background-color:blue;
+                border:1px solid #ccc;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                text-align:center;
+                font-size :2em;
+                transition: transform 0.3s,background-color 0.3s;
+            }
+            #greetingBox:hover
+            {
+                transform:scale(1,1);
+                background-color:darkblue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="greetingBox">
+        </div>
+        <script>
+             function displayGreeting(){
+            var now = new Date(); 
+        var hours = now.getHours(); 
+        var greeting;
+
+        if (hours < 12) {
+            greeting = "Good Morning!"; 
+        } else if (hours < 18) {
+            greeting = "Good Afternoon!";
+        } else {
+            greeting = "Good Evening!";
+        }
+        document.getElementById('greetingBox').innerText=greeting;
+    }
+    window.onload=displayGreeting;
+
+        </script>
+    </body>
+</html>
